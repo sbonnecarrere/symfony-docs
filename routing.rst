@@ -160,6 +160,8 @@ path to ``/blog/{page}``, you'll have a problem:
 * blog_list: ``/blog/{page}`` will match ``/blog/*``;
 * blog_show: ``/blog/{slug}`` will *also* match ``/blog/*``.
 
+Beware, in the example below the '*' doesn't mean nothing or something with slashes (if trailing slashes are not configured).
+
 When two routes match the same URL, the *first* route that's loaded wins. Unfortunately,
 that means that ``/blog/yay-routing`` will match the ``blog_list``. No good!
 
